@@ -11,3 +11,6 @@ $ ->
     $(@.dataset.target)[0].click()
 
   $(".best_in_place").best_in_place()
+
+  $('#start-tour').click ->
+  	introJs().start();

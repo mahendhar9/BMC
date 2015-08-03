@@ -22,6 +22,12 @@
     <% end %>
   </ol>
 
+  <% if @chart && !@chart_version %>
+    <button id = "start-tour" type="button" class="btn btn-default">Start Tour</button>
+  <% end %>
+
+  
+
   <div id="profile-pic-container" class="header-dropdown-trigger pull-right" data-target="#user_details">
     <%= image_tag current_user.image, id: 'profile-pic', class: "img-circle" %>
   </div>

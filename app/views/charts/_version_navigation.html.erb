@@ -1,7 +1,7 @@
 <div id="version_navigation" class="pull-right">
   <% if !@chart_version && !@chart.versions.any? %>
     <%# Viewing a live version of chart, which doesn't have any versions' %>
-    <%= link_to fa_icon("plus-circle", text: "Create Version"), versionalize_chart_path(@chart), method: :put, class: "btn btn-primary" %>
+    <%= link_to fa_icon("plus-circle", text: "Create Version"), versionalize_chart_path(@chart), method: :put, class: "btn btn-primary", data: {'disable-with' => "Please Wait", step: "1", intro: "Hello World"} %>
   <% else %>
     <div class="btn-group">
       <% if @chart_version %>
@@ -22,7 +22,7 @@
           <% if @chart_version %>
             <%= link_to "Live", chart_path(@chart) %>
           <% else %>
-            <%= link_to fa_icon("plus-circle", text: "Create Version"), versionalize_chart_path(@chart), method: :put %>
+            <%= link_to fa_icon("plus-circle", text: "Create Version"), versionalize_chart_path(@chart), method: :put, data: {'disable-with' => "Please Wait"} %>
           <% end %>
         </li>
         <li role="separator" class="divider"></li>

@@ -16,5 +16,6 @@
 //= require bootstrap-sprockets
 //= require best_in_place
 //= require ckeditor/init
+//= require intro.min
 //= require_tree .
 //= require turbolinks
